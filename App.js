@@ -9,7 +9,7 @@ const port = 3000;
 
 app.use(express.json());
 
-app.use('/games', authenticateToken, gamesRouter);
+app.use('/games', gamesRouter);
 app.use('/users', usersRouter);
 
 // Kết nối đến cơ sở dữ liệu và đồng bộ model
