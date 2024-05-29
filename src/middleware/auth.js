@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
+//Kiểm tra JWT
 function authenticateToken(req, res, next) {
   const token = req.header('Authorization') && req.header('Authorization').split(' ')[1];
   if (!token) return res.sendStatus(401);

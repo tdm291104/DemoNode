@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/games', gamesRouter);
 app.use('/users', usersRouter);
 
-// Kết nối đến cơ sở dữ liệu và đồng bộ model
+// Kết nối DB và chạy code
 sequelize.sync().then(() => {
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
