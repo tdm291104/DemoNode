@@ -10,5 +10,13 @@ Có 2 đối tượng là user và game:
     
     - Sử dụng bcrypt để mã hóa mật khẩu khi lưu vào DB.
 
+Hưỡng dẫn chạy code:
+
+    B1: Mở MySQL, chỉnh sửa chi tiết kết nối cho phù hợp với database trong code file DB.js
+
+    B2: Chạy code: npm start
+
+    B3: Sử dụng Postman kiểm thử API
+
 
 
