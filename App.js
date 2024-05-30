@@ -9,8 +9,11 @@ const port = 3000;
 
 app.use(express.json());
 
-app.use('/games', gamesRouter);
-app.use('/users', usersRouter);
+app.get('/api', (req,res)=>{
+  res.send("API")
+})
+app.use('/api/games', authenticateToken, gamesRouter);
+app.use('/api/users', usersRouter);
 
 // Kết nối DB và chạy code
 sequelize.sync().then(() => {

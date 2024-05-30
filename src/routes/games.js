@@ -7,14 +7,13 @@ import {
   updateGame,
   deleteGame
 } from '../controllers/gamecontroller.js';
-import authenticateToken from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.get('/', authenticateToken, getAllGames);
-router.post('/', authenticateToken, createGame);
-router.get('/:id', authenticateToken, getGameById);
-router.put('/:id', authenticateToken, updateGame);
-router.delete('/:id', authenticateToken, deleteGame);
+router.get('/', getAllGames);
+router.post('/', createGame);
+router.get('/:id', getGameById);
+router.put('/:id', updateGame);
+router.delete('/:id', deleteGame);
 
 export default router;

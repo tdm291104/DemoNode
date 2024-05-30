@@ -1,6 +1,6 @@
 import Game from '../models/game.js';
 
-//Hàm get allgame
+//get allgame
 export const getAllGames = async (req, res) => {
   try {
     const games = await Game.findAll();
@@ -10,7 +10,7 @@ export const getAllGames = async (req, res) => {
   }
 };
 
-//Hàm tạo game
+//create game
 export const createGame = async (req, res) => {
   try {
     const game = await Game.create(req.body);
@@ -20,7 +20,7 @@ export const createGame = async (req, res) => {
   }
 };
 
-//Hàm get game theo id
+//get game : id
 export const getGameById = async (req, res) => {
   try {
     const game = await Game.findByPk(req.params.id);
@@ -31,7 +31,7 @@ export const getGameById = async (req, res) => {
   }
 };
 
-//hàm chỉnh sửa game
+//edit game
 export const updateGame = async (req, res) => {
   try {
     const game = await Game.findByPk(req.params.id);
@@ -44,6 +44,7 @@ export const updateGame = async (req, res) => {
   }
 };
 
+//Delete game
 export const deleteGame = async (req, res) => {
   try {
     const game = await Game.findByPk(req.params.id);

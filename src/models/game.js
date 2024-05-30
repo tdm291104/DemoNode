@@ -2,20 +2,12 @@ import { DataTypes } from 'sequelize';
 import sequelize from '../config/DB.js';
 
 const Game = sequelize.define('Game', {
-  title: {
+  nameGame: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  genre: {
+  describe: {
     type: DataTypes.STRING,
-    allowNull: false
-  },
-  releaseDate: {
-    type: DataTypes.DATE,
-    allowNull: false
-  },
-  rating: {
-    type: DataTypes.FLOAT,
     allowNull: false
   }
 });
